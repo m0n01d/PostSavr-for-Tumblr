@@ -26,7 +26,7 @@ All data is stored in the browser
 feedback:
   email : dwightdoane@me.com
 
-chrome link
+chrome download:
 https://www.dropbox.com/s/o2eiviitq5e62mm/postsavr%20chrome.zip
 
 How to install on Chrome:
@@ -37,7 +37,7 @@ How to install on Chrome:
   Review the list of permissions in the dialog that appears. If you would like to proceed, click Install.
 
 
-safari link
+safari download:
 https://www.dropbox.com/s/m7wup4gtjwdvxrs/postsavr%20safari.zip
 
 How to install on Safari:
