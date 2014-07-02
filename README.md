@@ -36,3 +36,8 @@ How to install on Chrome:
 
 How to install on Safari:
   Double click ‘postSavr.safariextz’
+  
+  
+  
+  
+  ![alt tag](https://raw.githubusercontent.com/imdwit/PostSavr-for-Tumblr/master/postsavr.png)
