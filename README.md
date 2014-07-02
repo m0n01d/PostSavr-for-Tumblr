@@ -26,7 +26,8 @@ All data is stored in the browser
 feedback:
   email : dwightdoane@me.com
 
-
+chrome link
+  https://www.dropbox.com/s/o2eiviitq5e62mm/postsavr%20chrome.zip
 How to install on Chrome:
   Download the extension file from the website and save it to your computer.
   Click the Chrome menu icon Chrome menu on the browser toolbar.
@@ -34,6 +35,9 @@ How to install on Chrome:
   Locate the extension file on your computer and drag the postSavr.CRX file onto the Extensions page.
   Review the list of permissions in the dialog that appears. If you would like to proceed, click Install.
 
+
+safari link
+  https://www.dropbox.com/s/m7wup4gtjwdvxrs/postsavr%20safari.zip
 How to install on Safari:
   Double click ‘postSavr.safariextz’
   
