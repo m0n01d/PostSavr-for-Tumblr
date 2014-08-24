@@ -1,22 +1,7 @@
 (function() {
-var app = {};
-  function injectCSS() {
-    var headTag = document.getElementsByTagName("head")[0].innerHTML;
-    var newCSS = headTag + '<style type="text/css">'+
-    '.post_full .post_control.ps_remove:after {background-position: -914px -123px}'+
-    '.none{display:none;}'+
-    'span.ps_delete_tag{color: rgba(255, 0, 0, .5) !important;float:right; cursor: pointer;}'+
-    'a.ps_tag{display:inline !important; padding: 0 !important;}'+
-    'span.tag_length{float: right; margin: 0 7px;}'+
-    'div.tag_wrap{display: block;position: relative;padding: 2px 5px 0 20px;line-height: 36px;margin: 0;color: rgba(255,255,255,.50);font-size: 14px;font-weight: bold;text-decoration: none;border-top: 0;}'+
-    '#clearDash{cursor: pointer;}'+
-    '#saveDone {display: none;color: rgba(255, 255, 255, 0.498039);position: fixed;bottom: 12px;left: 35px;z-index: 10000;}'+
-    '#load_more {border-radius: 5px; cursor: pointer; background: white; padding: 10px; text-align: center;}'+
-    '</style>';
-    document.getElementsByTagName('head')[0].innerHTML += newCSS;
-  }
-
-  injectCSS();
+var app = {
+    scrollPosition: 0
+  };
 
   $('.right_column').append('<div id="post_Savr_container"><ul class="ps_list controls_section"><li class="section_header account_header">PostSavr</li><li class="section_header account_header none" id="clearDash">Clear saved posts</li></ul></div>');
   localforage.getItem('postSavr_tags', function(postSavr_tags) {
@@ -281,6 +266,31 @@ var app = {};
     }
     $('[data-length_for~=' + tag + ']').text(newval);
   }
+
+  var shrtcutHtml = '<div id="shrtct_container"><ul id="shrtct_list"><li class="shrtct"><a href="#" class="shrtct_click">Text</a></li><li class="shrtct"><a href="#" class="shrtct_click">Photo</a></li><li class="shrtct"><a href="#" class="shrtct_click">Quote<li class="shrtct"><a href="#" class="shrtct_click">Link</a></li></a></li><li class="shrtct"><a href="#" class="shrtct_click">Chat</a></li><li class="shrtct"><a href="#" class="shrtct_click">Audio</a></li><li class="shrtct"><a href="#" class="shrtct_click">Video</a></li></ul></div>';
+  $('body').append(shrtcutHtml);
+
+  $('body').on('click', '.shrtct_click', function(e) {
+    e.preventDefault();
+    var self = this;
+    //new_post_label_text
+    var _selector = '#new_post_label_'+$(self).text().toLowerCase();
+
+    document.querySelector(_selector).click();
+    app.scrollPosition = $(window).scrollTop();
+    $(window).scrollTop(0);
+  });
+
+  $('body').on('submit', '#post_form', function(e) {
+    console.log(e);
+    setTimeout(function() {
+      $(window).scrollTop(app.scrollPosition);
+    }, 3750)
+  });
+
+  $('body').on('click', '.close', function() {
+    $(window).scrollTop(app.scrollPosition);
+  });
 
 
 })();
