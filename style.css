@@ -1,0 +1,71 @@
+.post_full .post_control.ps_remove:after {
+  background-position: -914px -123px !important;
+}
+.none{
+  display:none;
+}
+span.ps_delete_tag{
+  color: rgba(255, 0, 0, .5) !important;
+  float:right; cursor: pointer !important;
+}
+a.ps_tag{
+  display:inline !important;
+  padding: 0 !important;}
+span.tag_length{
+  float: right; margin: 0 7px !important;
+}
+div.tag_wrap{
+  display: block !important;
+  position: relative !important;
+  padding: 2px 5px 0 20px !important;
+  line-height: 36px;
+  margin: 0;
+  color: rgba(255,255,255,.50);
+  font-size: 14px;
+  font-weight: bold;
+  text-decoration: none;
+  border-top: 0;
+}
+#clearDash{
+  cursor: pointer;
+}
+#saveDone {
+  display: none;
+  color: rgba(255, 255, 255, 0.498039);
+  position: fixed;
+  bottom: 12px;
+  left: 35px;
+  z-index: 10000;
+}
+#load_more {
+  border-radius: 5px; cursor: pointer; background: white; padding: 10px; text-align: center;
+}
+
+
+#shrtct_container {
+  font-size: 12px;
+  position: fixed;
+  bottom: 22px;
+  right: 95px;
+  z-index: 1000;
+}
+
+#shrtct_list {
+}
+
+.shrtct {
+  padding: 2px 5px;
+  display: inline;
+}
+
+.shrtct_click {
+  text-decoration: none;
+  color: rgba(255, 255, 255, 0.5) !important;
+}
+
+
+
+
+
+
+
